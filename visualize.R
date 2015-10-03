@@ -132,12 +132,12 @@ splitString <- function(text, width) {
 }
 
 title <- "Spacewalks: A Fifty-Year History"
-description <- "The first ever spacewalk was performed by cosmonaut Alexei Leonov on March 18, 1965. Since then, humankind has logged over 2,000 hours of extravehicular activity (EVA) beyond Earth's appreciable atmosphere. Three nations have led spacewalks: Russia, USA, and China, following the success of Shenzhou 7 on September 28, 2008." 
+description <- "The first-ever spacewalk was performed by cosmonaut Alexei Leonov on March 18, 1965. Since then, humankind has logged over 2,000 hours of extravehicular activity (EVA) beyond Earth's appreciable atmosphere. Three nations have led spacewalks: Russia, USA, and, most recently, China, following the success of Shenzhou 7 on September 27, 2008." 
 credits <- "Raw data from data.nasa.gov. GitHub repo at github.com/nsgrantham/spacewalks. Data visualization by Neal Grantham (@nsgrantham)."
 legend <- suppressWarnings(grab_legend(p2))
 
 title.grob <- grid::textGrob(title, gp=gpar(fontsize=32, fontface="bold"), vjust=1)
-description.grob <- grid::textGrob(splitString(description, unit(0.8, "npc")), gp=gpar(fontsize=15), vjust=1)
+description.grob <- grid::textGrob(splitString(description, unit(0.82, "npc")), gp=gpar(fontsize=15), vjust=1)
 credits.grob <- grid::textGrob(credits, gp=gpar(fontsize=8, fontface="italic"), vjust=6)
 g1 <- grid.arrange(title.grob, description.grob, legend, credits.grob, ncol=2)
 g2 <- suppressWarnings(grid.arrange(p1 + theme(legend.position="none"), p2 + theme(legend.position="none"), ncol = 2))
