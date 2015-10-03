@@ -133,7 +133,7 @@ splitString <- function(text, width) {
 
 title <- "Spacewalks: A Fifty-Year History"
 description <- "The first ever spacewalk was performed by cosmonaut Alexei Leonov on March 18, 1965. Since then, humankind has logged over 2,000 hours of extravehicular activity (EVA) beyond Earth's appreciable atmosphere. Three nations have led spacewalks: Russia, USA, and China, following the success of Shenzhou 7 on September 28, 2008." 
-credits <- "Raw data from data.nasa.gov. GitHub repo at github.com/nsgrantham/spacewalk. Data visualization by Neal Grantham (@nsgrantham)."
+credits <- "Raw data from data.nasa.gov. GitHub repo at github.com/nsgrantham/spacewalks. Data visualization by Neal Grantham (@nsgrantham)."
 legend <- suppressWarnings(grab_legend(p2))
 
 title.grob <- grid::textGrob(title, gp=gpar(fontsize=32, fontface="bold"), vjust=1)
